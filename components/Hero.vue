@@ -12,7 +12,7 @@
           Seattle's #1 Music Event Provider
         </template>
         <hr class="my-4" />
-        <b-button variant="primary" href="#">Start Seeing Events</b-button>
+         <NuxtLink to="/" class="nav-link"> <span class="sr-only">(current)</span><b-button variant="primary"> Start Seeing Events </b-button></NuxtLink>
       </b-jumbotron>
     </b-container>
   </div>
