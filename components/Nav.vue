@@ -1,9 +1,9 @@
 <template>
   <div>
    <b-container fluid>
-   <b-navbar toggleable="md" type="dark" variant="primary">
+   <b-navbar toggleable="md" type="dark" variant="primary" class="mb-0 mt-1">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <NuxtLink class="navbar-brand" to="/">SeaUrMusic</NuxtLink>
+      <NuxtLink class="navbar-brand" to="/">Home</NuxtLink>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
            <NuxtLink to="/" class="nav-link">Events <span class="sr-only">(current)</span></NuxtLink>
