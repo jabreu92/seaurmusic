@@ -3,8 +3,11 @@
     <b-container fluid>
      <b-row>
        <b-col lg="6">
-           
+           <Carrousel />
         </b-col>
+         <b-col lg="6">
+            <Reviews />
+         </b-col>
     </b-row>
     </b-container>   
 </div>

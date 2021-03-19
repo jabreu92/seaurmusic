@@ -1,6 +1,6 @@
 <template>
-  <div >
-
+  <div>
+    <LargeDisplay />
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>Top 5 Music Events in WA</h3>
    <div v-if="!this.loading">
     <b-carousel
       controls
