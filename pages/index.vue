@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DeckCards />
+    <MediumDisplay />
   </div>
 </template>
 
