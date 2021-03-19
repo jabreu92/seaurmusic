@@ -2,7 +2,7 @@
     <div>
         <b-container fluid>
         <h3>Customer Reviews</h3>
-        <div v-if="reviewers.results">
+        <div v-if="!this.loading">
             <ReviewCard
                 v-for="reviewer in reviewers.results"
                 :key="reviewer.login.uuid"
