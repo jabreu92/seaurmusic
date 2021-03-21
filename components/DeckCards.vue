@@ -53,7 +53,7 @@ export default {
                       id: 5,genre: 'Latin  ', img:'https://live.staticflickr.com/8005/7585087378_bb82fa1670_b.jpg', 
                       description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.',
                       classificationId: 'KnvZfZ7vAJ6', 
-                      name: 'latinevents'
+                      name: 'latinoevents'
                     },
                     {
                       id: 6,genre: 'Country ', img:'https://live.staticflickr.com/3253/2721560965_b113d85226_b.jpg', 

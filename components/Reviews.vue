@@ -15,20 +15,23 @@
 
 <script>
 
+
 import axios from 'axios'
 
-    export default {
-        data(){
-            return {
-                reviewers: []
-            }
-        },
-        mounted (){
-        axios
-        .get('https://randomuser.me/api/?results=7')
+export default {
+    data() {
+        return {
+            loading: true,
+            errored: false,
+            reviewers: []
+        }
+    },
+     mounted () {
+     axios
+        .get('https://randomuser.me/api/?results=6')
         .then(response => { 
-           this.reviewers = response.data
-           console.log(this.reviewers)
+            this.reviewers = response.data
+           
       
         })
         .catch(error => {
@@ -38,9 +41,10 @@ import axios from 'axios'
         .finally(() => this.loading = false)
             
         }
-    
     }
 </script>
 
 <style lang="scss" scoped>
 </style>
+
+
