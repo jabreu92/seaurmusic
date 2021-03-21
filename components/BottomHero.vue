@@ -1,18 +1,18 @@
 <template>
   <div>
-      <b-container fluid>
-    <b-jumbotron
-      bg-variant="dark"
-      text-variant="white"
-      border-variant="dark"
-      class="mb-0 mt-0"
-    >
-      <template v-slot:header> {{headerText}}</template>
-      <template v-slot:lead> {{leadText}}</template>
-      <hr class="mb-1" />
-      <p>{{addressText}}</p>
-    </b-jumbotron>
-      </b-container>
+    <b-container fluid>
+      <b-jumbotron
+        bg-variant="dark"
+        text-variant="white"
+        border-variant="dark"
+        class="mb-0 mt-0"
+      >
+        <template v-slot:header> {{headerText}}</template>
+        <template v-slot:lead> {{leadText}}</template>
+        <hr class="mb-1" />
+        <p>{{addressText}}</p>
+      </b-jumbotron>
+    </b-container>
   </div>
 </template>
 <script scoped>

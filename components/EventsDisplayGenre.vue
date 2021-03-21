@@ -1,26 +1,22 @@
 <template>
-<div>
+  <div>
     <b-container fluid>
-     <b-row>
-       <b-col lg="12">
-           <DeckCards />
+      <b-row>
+        <b-col lg="12">
+          <EventsGenreCards />
         </b-col>
-    </b-row>
-    </b-container>   
-</div>
-  
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script>
 
 
 export default {
-   
+
 
 }
 </script>
 
-<style scoped>
-
-   
-</style>
+<style scoped></style>

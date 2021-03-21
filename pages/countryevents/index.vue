@@ -3,8 +3,7 @@
     <b-container fluid>
       <div v-if="!this.loading">
         <b-row>
-            
-          <b-col md="3" v-for="event in rockEvents" :key="event.id">
+          <b-col md="3" v-for="event in countryevents" :key="event.id">
             <b-card
               :title="event.name"
               :img-src="event.images[0].url"
@@ -13,20 +12,14 @@
               tag="article"
               class="mt-1"
             >
-                <b-card-text>
-                Date: {{event.dates.start.localDate}}
-              </b-card-text>
-              <b-card-text>
-                Time: {{event.dates.start.localTime}}
-              </b-card-text>
-             
+              <b-card-text> Date: {{event.dates.start.localDate}} </b-card-text>
+              <b-card-text> Time: {{event.dates.start.localTime}} </b-card-text>
+
               <b-card-text>
                 Event URL: <a :href="event.url" target="_blank">Click Here</a>
               </b-card-text>
-               
             </b-card>
           </b-col>
-          
         </b-row>
       </div>
     </b-container>
@@ -42,7 +35,7 @@ import axios from 'axios'
             loading: true,
             items: null,
             errored: false,
-            rockEvents: []
+            countryevents: []
         }
     },
      mounted () {
@@ -54,18 +47,18 @@ import axios from 'axios'
         .get(url)
         .then(response => {
             this.items = response.data
-            this.rockEvents = this.items._embedded.events
-          
-               for (let i =0; i<this.rockEvents.length; i++){
+            this.countryevents = this.items._embedded.events
 
-                let event_image_array = this.rockEvents[i].images
-                
+               for (let i =0; i<this.countryevents.length; i++){
+
+                let event_image_array = this.countryevents[i].images
+
                 let filteredImagesArray = event_image_array.filter(function (el) {
                             return el.width == 640 && el.height == 360;
                  });
-                this.rockEvents[i].images = filteredImagesArray
+                this.countryevents[i].images = filteredImagesArray
             }
-            console.log(this.rockEvents)
+            console.log(this.countryevents)
         })
         .catch(error => {
             console.log(error)

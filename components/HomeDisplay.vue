@@ -1,28 +1,24 @@
 <template>
-<div>
+  <div>
     <b-container fluid>
-     <b-row>
-       <b-col lg="6">
-           <Carrousel />
+      <b-row>
+        <b-col lg="6">
+          <HomeCarrousel />
         </b-col>
-         <b-col lg="6">
-            <Reviews />
-         </b-col>
-    </b-row>
-    </b-container>   
-</div>
-  
+        <b-col lg="6">
+          <Reviews />
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script>
 
 export default {
-   
+
 
 }
 </script>
 
-<style scoped>
-
-   
-</style>
+<style scoped></style>

@@ -29,47 +29,37 @@
 export default {
   data() {
     return {
-      text: `
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-        tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-        wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-        synth nesciunt you probably haven't heard of them accusamus labore VHS.
-      `,
       details:[
               {
-                  title: 'WhoMadeThisApp',
+                  title: 'Who Made This Web App ?',
                   content: 'card1 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'WhereIStheUsersLinkedin',
+                  title: 'More About The Author',
                   content: 'card2 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'ContactInfo',
+                  title: 'Career Experience ',
                   content: 'card3 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'ResumeExperonce',
+                  title: 'Hobbies',
                   content: 'card4 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'Boeing',
+                  title: 'Author Roots',
                   content: 'card5 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'Ibm',
+                  title: 'Contact Info',
                   content: 'card6 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'CollegeInfo',
+                  title: 'UW Info',
                   content: 'card7 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               },
               {
-                  title: 'Hobbies',
+                  title: 'Current Life',
                   content: 'card8 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
               }
           ]
