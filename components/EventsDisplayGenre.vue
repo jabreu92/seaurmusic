@@ -12,10 +12,9 @@
 </template>
 
 <script>
-import DeckCards from './DeckCards.vue'
+
 
 export default {
-  components: { DeckCards },
    
 
 }

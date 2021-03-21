@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DeckCards />
+    <HomeDisplay />
   </div>
 </template>
 

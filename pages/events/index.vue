@@ -1,15 +1,18 @@
 <template>
   <div>
-      <h2>rockevents/id</h2>
+    <EventsDisplayGenre />
   </div>
 </template>
 
 <script>
-export default {
 
-}
+
+export default {
+  
+  }
 </script>
 
 <style>
 
-</style>
+
+

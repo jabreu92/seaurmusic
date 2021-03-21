@@ -49,7 +49,7 @@ import axios from 'axios'
     },
      mounted () {
     //let genre = this.$route.params.classificationId
-    let genre = 'KnvZfZ7vAeA'
+    let genre = 'KnvZfZ7vAvF'
     let url = `https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&source=ticketmaster&locale=*&countryCode=US&stateCode=WA&classificationName=music&classificationId=${genre}`
 
      axios

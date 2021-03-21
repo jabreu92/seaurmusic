@@ -25,7 +25,7 @@ import axios from 'axios'
         },
         mounted (){
         axios
-        .get('https://randomuser.me/api/?results=6')
+        .get('https://randomuser.me/api/?results=7')
         .then(response => { 
            this.reviewers = response.data
            console.log(this.reviewers)

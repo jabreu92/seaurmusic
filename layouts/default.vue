@@ -1,10 +1,11 @@
 <template>
   <div>
-    <Nav />
+    
     <Hero />
+    <Nav />
     <Nuxt />
     <Nav />
-    <Hero />
+    <BottomHero />
   
   </div>
 </template>
