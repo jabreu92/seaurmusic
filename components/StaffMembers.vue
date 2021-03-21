@@ -1,38 +1,39 @@
 <template>
     <div>
         <b-container fluid>
-        <h3>Customer Reviews</h3>
+        <h3>The Staff</h3>
         <div v-if="!this.loading">
-            <ReviewCard
-                v-for="reviewer in reviewers.results"
-                :key="reviewer.login.uuid"
-                :review="reviewer"
+         <b-row>
+          <b-col md="3" v-for="index in 4 " :key="index">
+            <StaffMemberCard
+                v-for="staffmember in staffmembers.results"
+                :key="staffmember.login.uuid"
+                :staff="staffmember"
             />
+           </b-col>
+         
+         </b-row>
+              
         </div>
         </b-container>
     </div>
 </template>
-
 <script>
-
-
 import axios from 'axios'
-
 export default {
     data() {
         return {
             loading: true,
             errored: false,
-            reviewers: []
+            staffmembers: [],
+            
         }
     },
      mounted () {
      axios
-        .get('https://randomuser.me/api/?results=7')
+        .get('https://randomuser.me/api/?results=2')
         .then(response => { 
-            this.reviewers = response.data
-           
-      
+            this.staffmembers = response.data
         })
         .catch(error => {
             console.log(error)
