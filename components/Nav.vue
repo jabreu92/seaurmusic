@@ -7,8 +7,8 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
            <NuxtLink to="/events" class="nav-link">Events <span class="sr-only">(current)</span></NuxtLink>
-           <NuxtLink to="/" class="nav-link">Blog <span class="sr-only">(current)</span></NuxtLink>
-           <NuxtLink to="/" class="nav-link">FAQ <span class="sr-only">(current)</span></NuxtLink>
+           <NuxtLink to="/staff" class="nav-link">Staff <span class="sr-only">(current)</span></NuxtLink>
+           <NuxtLink to="/faq" class="nav-link">FAQ <span class="sr-only">(current)</span></NuxtLink>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

@@ -13,19 +13,20 @@
               tag="article"
               class="mt-1"
             >
-                <b-card-text>
-                Date: {{event.dates.start.localDate}}
+            
+              <b-card-text>
+               Date: {{event.dates.start.localDate}}
               </b-card-text>
               <b-card-text>
-                Time: {{event.dates.start.localTime}}
+               Time: {{event.dates.start.localTime}}
               </b-card-text>
-             
               <b-card-text>
                 Event URL: <a :href="event.url" target="_blank">Click Here</a>
               </b-card-text>
                
             </b-card>
           </b-col>
+          
           
         </b-row>
       </div>
@@ -47,7 +48,7 @@ import axios from 'axios'
     },
      mounted () {
     //let genre = this.$route.params.classificationId
-    let genre = 'KnvZfZ7vAeA'
+    let genre = 'KnvZfZ7vAJ6'
     let url = `https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&source=ticketmaster&locale=*&countryCode=US&stateCode=WA&classificationName=music&classificationId=${genre}`
 
      axios
