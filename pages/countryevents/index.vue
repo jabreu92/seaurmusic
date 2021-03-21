@@ -19,9 +19,7 @@
               <b-card-text>
                 Time: {{event.dates.start.localTime}}
               </b-card-text>
-              <b-card-text>
-                Promoter: {{event.promoter.name}}
-              </b-card-text>
+             
               <b-card-text>
                 Event URL: <a :href="event.url" target="_blank">Click Here</a>
               </b-card-text>
