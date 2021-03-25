@@ -19,7 +19,7 @@ export default {
         review: {
             type: Object,
             required: true,
-            default: null // create a default object if not found ?
+            default: null // Pass in the specific parameters instead of teh whole objet , best practice
         }
     }
 }

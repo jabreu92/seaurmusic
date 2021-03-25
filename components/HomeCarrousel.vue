@@ -46,7 +46,7 @@ export default {
         .then(response => {
             this.items = response.data
             //Slice array to top 5 elements
-            this.topEvents = this.items._embedded.events.slice(0,5)
+            this.topEvents = this.items._embedded.events.slice(0,5) //page length to send 5 results
             //Filtering images from the events to be only 1024 width && 683 height
             for (let i =0; i<this.topEvents.length; i++){
                 let event_image_array = this.topEvents[i].images
@@ -55,6 +55,14 @@ export default {
                  });
                 this.topEvents[i].images = filteredImagesArray
             }
+            
+            //If no data is found
+           if(this.items.length == 0){
+             this.errored = true // Test this by messing with API KEY delete character
+           }
+        //V-if v else if loading true we are getting data, else show content
+
+
         })
         .catch(error => {
             console.log(error)
