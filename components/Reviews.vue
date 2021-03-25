@@ -6,7 +6,8 @@
         <ReviewCard
           v-for="reviewer in reviewers.results"
           :key="reviewer.login.uuid"
-          :review="reviewer"
+          :reviewpic="reviewer.picture.large"
+          :reviewusername="reviewer.login.username"
         />
       </div>
     </b-container>
