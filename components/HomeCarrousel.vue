@@ -42,11 +42,11 @@ export default {
     },
      mounted () {
      axios
-        .get('https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&locale=*&countryCode=US&stateCode=WA&classificationName=music')
+        .get('https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&locale=*&size=5&countryCode=US&stateCode=WA&classificationName=music')
         .then(response => {
             this.items = response.data
-            //Slice array to top 5 elements
-            this.topEvents = this.items._embedded.events.slice(0,5) //page length to send 5 results
+            this.topEvents = this.items._embedded.events
+            
             //Filtering images from the events to be only 1024 width && 683 height
             for (let i =0; i<this.topEvents.length; i++){
                 let event_image_array = this.topEvents[i].images

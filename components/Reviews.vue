@@ -28,7 +28,7 @@ export default {
         .get('https://randomuser.me/api/?results=7')
         .then(response => {
             this.reviewers = response.data
-            console.log(this.reviewers)
+            
         })
         .catch(error => {
             console.log(error)

@@ -4,7 +4,7 @@
     <Hero />
     <Nav />
     <Nuxt />
-    <Nav />
+    <BottomNav />
     <BottomHero />
   
   </div>
