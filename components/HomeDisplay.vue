@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-container fluid>
+      
       <b-row>
         <b-col lg="6">
           <HomeCarrousel />

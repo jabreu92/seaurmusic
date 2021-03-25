@@ -1,6 +1,10 @@
 <template>
   <div>
     <h3>Top 5 Music Events in WA</h3>
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+          </section>
+  <section v-else>
     <div v-if="!this.loading">
       <b-carousel
         controls
@@ -19,6 +23,7 @@
         </b-carousel-slide>
       </b-carousel>
     </div>
+     </section>
   </div>
 </template>
 
