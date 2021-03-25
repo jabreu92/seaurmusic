@@ -5,7 +5,10 @@
         <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
           </section>
   <section v-else>
-    <div v-if="!this.loading">
+    <div v-if="this.loading"> 
+      <p>One Moment... we are getting your request</p>
+    </div>
+    <div v-else>
       <b-carousel
         controls
         indicators
@@ -58,9 +61,9 @@ export default {
             
             //If no data is found
            if(this.items.length == 0){
-             this.errored = true // Test this by messing with API KEY delete character
+             this.errored = true 
            }
-        //V-if v else if loading true we are getting data, else show content
+      
 
 
         })
