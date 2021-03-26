@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <b-navbar toggleable="md" type="dark" variant="primary" class="mb-0 mt-0 border-radius: 0;">
+      <b-navbar toggleable="md" type="dark" variant="primary" class="mb-0 mt-0">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <NuxtLink class="navbar-brand" to="/">Home</NuxtLink>
         <b-collapse is-nav id="nav_collapse">

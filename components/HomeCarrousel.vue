@@ -9,22 +9,24 @@
       <p>One Moment... we are getting your request</p>
     </div>
     <div v-else>
-      <b-carousel
+      
+        <b-carousel
+        id="carousel-fade"
         controls
         indicators
         fade
         img-width="1024"
         img-height="683"
-        class="mt-1"
-      >
-        <b-carousel-slide
+        class="mb-1 mt-0"
+          >
+          <b-carousel-slide
           v-for="event in topEvents"
           :key="event.id"
           :img-src="event.images[0].url"
+          :caption="event.name"
         >
-          <h1>{{event.name}}</h1>
         </b-carousel-slide>
-      </b-carousel>
+  </b-carousel>
     </div>
      </section>
   </div>
@@ -77,4 +79,14 @@ export default {
     }
 </script>
 
-<style></style>
+<style scoped>
+
+.carousel-caption{
+    position: relative;
+    left: 0;
+    top: 0;
+    color: red;
+ 
+}
+
+</style>
