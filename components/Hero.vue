@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <b-jumbotron
-        bg-variant="dark"
+        bg-variant="info"
         text-variant="white"
         border-variant="dark"
         class="mb-0 mt-0"
@@ -12,7 +12,7 @@
         <hr class="mb-1" />
         <p>{{addressText}}</p>
         <div>
-          <b-button variant="primary" @click="showModal" v-b-modal.modal-1
+          <b-button variant="dark" @click="showModal" v-b-modal.modal-1
             >Contact</b-button
           >
           <b-modal
@@ -33,7 +33,7 @@
             </div>
             <b-button
               class="mt-3"
-              variant="outline-danger"
+              variant="dark"
               block
               @click="hideModal"
               >Close</b-button
@@ -73,4 +73,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped >
+
+
+
+</style>
