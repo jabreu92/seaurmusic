@@ -7,7 +7,7 @@
             block
             href="#"
             v-b-toggle="'accordion-' + index"
-            variant="info"
+            variant="yellow"
             >{{item.title}}</b-button
           >
         </b-card-header>

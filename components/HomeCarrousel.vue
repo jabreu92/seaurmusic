@@ -9,7 +9,6 @@
       <p>One Moment... we are getting your request</p>
     </div>
     <div v-else>
-      
         <b-carousel
         id="carousel-fade"
         controls
@@ -18,6 +17,7 @@
         img-width="1024"
         img-height="683"
         class="mb-1 mt-0"
+        background="dark"
           >
           <b-carousel-slide
           v-for="event in topEvents"
@@ -25,6 +25,7 @@
           :img-src="event.images[0].url"
           :caption="event.name"
         >
+      <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
         </b-carousel-slide>
   </b-carousel>
     </div>
@@ -65,9 +66,6 @@ export default {
            if(this.items.length == 0){
              this.errored = true 
            }
-      
-
-
         })
         .catch(error => {
             console.log(error)
@@ -81,12 +79,6 @@ export default {
 
 <style scoped>
 
-.carousel-caption{
-    position: relative;
-    left: 0;
-    top: 0;
-    color: red;
- 
-}
+
 
 </style>

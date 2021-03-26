@@ -4,20 +4,14 @@
       <div v-if="!this.loading">
         <b-row>
           <b-col md="3" v-for="event in danceelectronicevents" :key="event.id">
-            <b-card
-              :title="event.name"
-              :img-src="event.images[0].url"
-              img-alt="Genre Music"
-              img-top
-              tag="article"
-              class="mt-1"
-            >
+             <b-card bg-variant="secondary" text-variant="white"   :title="event.name" class="mt-1 mb-1 ">
+              <BootstrapImage :image-src-url="event.images[0].url" /> 
               <b-card-text> Date: {{event.dates.start.localDate}} </b-card-text>
-              <b-card-text> Time: {{event.dates.start.localTime}} </b-card-text>
-
-              <b-card-text>
-                Event URL: <a :href="event.url" target="_blank">Click Here</a>
-              </b-card-text>
+              <b-card-text> Time: {{event.dates.start.localTime}}</b-card-text>
+              <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
+              <template #footer>
+                <small >Last Updated 3min ago</small>
+              </template>
             </b-card>
           </b-col>
         </b-row>

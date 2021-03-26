@@ -27,4 +27,11 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+   .navbar {
+    border-radius: 5px;
+  }
+
+
+</style>

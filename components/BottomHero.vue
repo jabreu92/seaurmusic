@@ -4,7 +4,7 @@
       <b-jumbotron
         bg-variant="dark"
         text-variant="white"
-        border-variant="dark"
+      
         class="mb-0 mt-0"
       >
         <template v-slot:header> {{headerText}}</template>

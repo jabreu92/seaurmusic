@@ -2,23 +2,22 @@
   <div>
     <h3>Select your genre</h3>
     <b-row>
+
       <b-col md="3" v-for="item in items" :key="item.id">
-        <b-card
-          :title="item.genre"
-          :img-src="item.img"
-          img-alt="Genre Music"
-          img-top
-          tag="article"
-        >
-          <b-card-text>
-            {{item.description}}
-          </b-card-text>
-          <NuxtLink
+       <b-card bg-variant="secondary" text-variant="white"  :title="item.genre" class="mt-1 mb-1 ">
+        <BootstrapImage :image-src-url="item.img" /> 
+      <b-card-text>
+         {{item.description}}
+      </b-card-text>
+       <NuxtLink
             :to="{ name: item.name, params: { classificationId: item.classificationId } }"
             class="nav-link"
-            ><b-button variant="primary">See Events</b-button></NuxtLink
+            ><b-button variant="success">See Events</b-button></NuxtLink
           >
-        </b-card>
+      <template #footer>
+        <small >Last Updated 3min ago</small>
+      </template>
+    </b-card>
       </b-col>
     </b-row>
   </div>
