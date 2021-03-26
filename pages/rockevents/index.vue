@@ -49,6 +49,9 @@ import axios from 'axios'
                             return el.width == 640 && el.height == 360;
                  });
                 this.rockEvents[i].images = filteredImagesArray
+                let date = new Date(this.rockEvents[i].dates.start.localDate)
+                this.rockEvents[i].dates.start.localDate = date
+                
             }
 
         })
