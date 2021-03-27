@@ -2,6 +2,14 @@
   <div>
     <b-container fluid>
       <h3>Customer Reviews</h3>
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+          </section>
+          <section v-else>
+            <div v-if="this.loading"> 
+      <p>One Moment... we are getting your request</p>
+    </div>
+    <div v-else>
       <div v-if="!this.loading">
         <ReviewCard
           v-for="reviewer in reviewers.results"
@@ -10,6 +18,8 @@
           :reviewusername="reviewer.login.username"
         />
       </div>
+      </div>
+      </section>
     </b-container>
   </div>
 </template>

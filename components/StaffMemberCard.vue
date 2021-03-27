@@ -15,12 +15,40 @@
 
 <script>
 export default {
- props: {
-        staff: {
-            type: Object,
+    props: {
+        staffFullName: {
+            type: String,
             required: true,
-            default: null // create a default object if not found ?
-        }
+            default: "John Smith" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+        staffPic: {
+            type: String,
+            required: true,
+            default: "https://picsum.photos/200/300" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+        staffEmail: {
+            type: String,
+            required: true,
+            default: "Staff Email" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+         staffPhone: {
+            type: String,
+            required: true,
+            default: "Staff PhoneNumber" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+         staffHometown: {
+            type: String,
+            required: true,
+            default: "Staff Hometown" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+         staffAge: {
+            type: String,
+            required: true,
+            default: "Staff Age" // Pass in the specific parameters instead of teh whole objet , best practice
+        },
+
+
+
     }
 }
 </script>

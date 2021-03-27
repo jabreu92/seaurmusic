@@ -16,7 +16,13 @@
             <StaffMemberCard
               v-for="staffmember in staffmembers.results"
               :key="staffmember.login.uuid"
-              :staff="staffmember"
+              :staffFullName="staffmember.name.first + staffmember.name.last"
+              :staffPic ="staffmember.picture.large"
+              :staffEmail ="staffmember.email"
+              :staffPhone ="staffmember.phone"
+              :staffHometown ="staffmember.location.country"
+              :staffAge ="staffmember.dob.age"
+              
             />
           </b-col>
         </b-row>
