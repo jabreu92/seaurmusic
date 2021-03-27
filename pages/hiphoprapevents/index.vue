@@ -1,32 +1,45 @@
 <template>
   <div>
-    
     <b-container fluid>
       <section v-if="errored">
-        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-          </section>
-          <section v-else>
-            <div v-if="this.loading"> 
-      <p>One Moment... we are getting your request</p>
-    </div>
-    <div v-else>
-      <div v-if="!this.loading">
-        <b-row>
-          <b-col md="3" v-for="event in hiphoprapEvents" :key="event.id">
-             <b-card bg-variant="secondary" text-variant="white"   :title="event.name" class="mt-1 mb-1 ">
-              <BootstrapImage :image-src-url="event.images[0].url" /> 
-              <b-card-text> Date: {{event.dates.start.localDate}} </b-card-text>
-              <b-card-text> Time: {{event.dates.start.localTime}}</b-card-text>
-              <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
-              <template #footer>
-                <small >Last Updated 3min ago</small>
-              </template>
-            </b-card>
-          </b-col>
-        </b-row>
-      </div>
-      </div>
-       </section>
+        <p>
+          We're sorry, we're not able to retrieve this information at the
+          moment, please try back later
+        </p>
+      </section>
+      <section v-else>
+        <div v-if="this.loading">
+          <p>One Moment... we are getting your request</p>
+        </div>
+        <div v-else>
+          <div v-if="!this.loading">
+            <b-row>
+              <b-col md="3" v-for="event in hiphoprapEvents" :key="event.id">
+                <b-card
+                  bg-variant="secondary"
+                  text-variant="white"
+                  :title="event.name"
+                  class="mt-1 mb-1"
+                >
+                  <BootstrapImage :image-src-url="event.images[0].url" />
+                  <b-card-text>
+                    Date: {{event.dates.start.localDate}}
+                  </b-card-text>
+                  <b-card-text>
+                    Time: {{event.dates.start.localTime}}</b-card-text
+                  >
+                  <b-button :href="event.url" target="_blank" variant="success"
+                    >Click Here to Learn More
+                  </b-button>
+                  <template #footer>
+                    <small>Last Updated 3min ago</small>
+                  </template>
+                </b-card>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+      </section>
     </b-container>
   </div>
 </template>
@@ -62,13 +75,13 @@ import axios from 'axios'
                 this.hiphoprapEvents[i].images = filteredImagesArray
                 let date = new Date(this.hiphoprapEvents[i].dates.start.localDate)
                 this.hiphoprapEvents[i].dates.start.localDate = date
-            
-                
+
+
             }
 
               //If no data is found
            if(this.items.length == 0){
-             this.errored = true 
+             this.errored = true
            }
 
         })

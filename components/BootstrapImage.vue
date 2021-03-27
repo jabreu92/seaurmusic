@@ -1,12 +1,20 @@
 <template>
   <div>
-    <b-img thumbnail :rounded="imageBorder" :src="imageSrcUrl" fluid :alt="imageAlt" :title="imageTitle" @click="modifyBorder"></b-img>
+    <b-img
+      thumbnail
+      :rounded="imageBorder"
+      :src="imageSrcUrl"
+      fluid
+      :alt="imageAlt"
+      :title="imageTitle"
+      @click="modifyBorder"
+    ></b-img>
   </div>
 </template>
 
 <script>
 
-const imageMixin = { 
+const imageMixin = {
 
   data (){
     return {
@@ -47,13 +55,11 @@ export default {
       required: false,
       default: 'Event Title Goes Here'
     }
-  }, 
+  },
   mixins: [imageMixin]
-  
+
 
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

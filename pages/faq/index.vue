@@ -1,8 +1,8 @@
 <template>
   <div>
-      <b-container fluid>
-          <AccordionFAQ />
-      </b-container>
+    <b-container fluid>
+      <AccordionFAQ />
+    </b-container>
   </div>
 </template>
 
@@ -12,6 +12,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

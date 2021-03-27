@@ -1,39 +1,44 @@
 <template>
   <div>
     <h3>Top 5 Music Events in WA</h3>
-      <section v-if="errored">
-        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-          </section>
-  <section v-else>
-    <div v-if="this.loading"> 
-      <p>One Moment... we are getting your request</p>
-    </div>
-    <div v-else>
+    <section v-if="errored">
+      <p>
+        We're sorry, we're not able to retrieve this information at the moment,
+        please try back later
+      </p>
+    </section>
+    <section v-else>
+      <div v-if="this.loading">
+        <p>One Moment... we are getting your request</p>
+      </div>
+      <div v-else>
         <b-carousel
-        id="carousel-fade"
-        controls
-        indicators
-        fade
-        img-width="1024"
-        img-height="683"
-        class="mb-1 mt-0"
-        background="dark"
-          >
-          <b-carousel-slide
-          v-for="event in topEvents"
-          :key="event.id"
-          :img-src="event.images[0].url"
+          id="carousel-fade"
+          controls
+          indicators
+          fade
+          img-width="1024"
+          img-height="683"
+          class="mb-1 mt-0"
+          background="dark"
         >
-      <div class="d-flex h-100 align-items-center justify-content-center ">
-          <div>
-            <h4 id="caption-head">{{event.name}}</h4>
-             <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
+          <b-carousel-slide
+            v-for="event in topEvents"
+            :key="event.id"
+            :img-src="event.images[0].url"
+          >
+            <div class="d-flex h-100 align-items-center justify-content-center">
+              <div>
+                <h4 id="caption-head">{{event.name}}</h4>
+                <b-button :href="event.url" target="_blank" variant="success"
+                  >Click Here to Learn More
+                </b-button>
+              </div>
             </div>
-        </div>
-        </b-carousel-slide>
-  </b-carousel>
-    </div>
-     </section>
+          </b-carousel-slide>
+        </b-carousel>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -56,7 +61,7 @@ export default {
         .then(response => {
             this.items = response.data
             this.topEvents = this.items._embedded.events
-            
+
             //Filtering images from the events to be only 1024 width && 683 height
             for (let i =0; i<this.topEvents.length; i++){
                 let event_image_array = this.topEvents[i].images
@@ -65,10 +70,10 @@ export default {
                  });
                 this.topEvents[i].images = filteredImagesArray
             }
-            
+
             //If no data is found
            if(this.items.length == 0){
-             this.errored = true 
+             this.errored = true
            }
         })
         .catch(error => {
@@ -83,19 +88,11 @@ export default {
 
 <style scoped>
 .carousel-center .carousel-caption {
-    top: 20px;
-   
-   
-  }
-  #caption-head {
-    color: white;
-    background-color: grey;
-    border-radius: 5px;
-  }
-
-  
-
+  top: 20px;
+}
+#caption-head {
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+}
 </style>
-
-
-

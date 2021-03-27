@@ -1,12 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <b-jumbotron
-        bg-variant="info"
-        text-variant="white"
-
-        class="mb-0 mt-0"
-      >
+      <b-jumbotron bg-variant="info" text-variant="white" class="mb-0 mt-0">
         <template v-slot:header> {{headerText}}</template>
         <template v-slot:lead> {{leadText}}</template>
         <hr class="mb-1" />
@@ -31,11 +26,7 @@
                 <span v-else> Show Info </span>
               </b-button>
             </div>
-            <b-button
-              class="mt-3"
-              variant="dark"
-              block
-              @click="hideModal"
+            <b-button class="mt-3" variant="dark" block @click="hideModal"
               >Close</b-button
             >
           </b-modal>
@@ -73,8 +64,4 @@ export default {
 }
 </script>
 
-<style scoped >
-
-
-
-</style>
+<style scoped></style>

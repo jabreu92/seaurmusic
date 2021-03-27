@@ -1,13 +1,18 @@
 <template>
   <div>
-     <b-card bg-variant="secondary" text-variant="white"  :title="staffFullName" class="mt-1 mb-1 ">
-      <BootstrapImage :image-src-url="staffPic" /> 
+    <b-card
+      bg-variant="secondary"
+      text-variant="white"
+      :title="staffFullName"
+      class="mt-1 mb-1"
+    >
+      <BootstrapImage :image-src-url="staffPic" />
       <b-card-text> Email : {{staffEmail}} </b-card-text>
       <b-card-text> Phone: {{staffPhone}} </b-card-text>
       <b-card-text> Hometown: {{staffHometown}} </b-card-text>
       <b-card-text> Age: {{staffAge}} </b-card-text>
       <template #footer>
-        <small >Last Updated 3min ago</small>
+        <small>Last Updated 3min ago</small>
       </template>
     </b-card>
   </div>
