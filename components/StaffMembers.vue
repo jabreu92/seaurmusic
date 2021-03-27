@@ -1,6 +1,14 @@
 <template>
   <div>
     <b-container fluid>
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+          </section>
+            <section v-else>
+            <div v-if="this.loading"> 
+      <p>One Moment... we are getting your request</p>
+    </div>
+    <div v-else>
       <h3>The Staff</h3>
       <div v-if="!this.loading">
         <b-row>
@@ -13,6 +21,8 @@
           </b-col>
         </b-row>
       </div>
+      </div>
+            </section>
     </b-container>
   </div>
 </template>

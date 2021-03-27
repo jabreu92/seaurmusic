@@ -1,9 +1,18 @@
 <template>
   <div>
+    
     <b-container fluid>
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+          </section>
+          <section v-else>
+            <div v-if="this.loading"> 
+      <p>One Moment... we are getting your request</p>
+    </div>
+    <div v-else>
       <div v-if="!this.loading">
         <b-row>
-          <b-col md="3" v-for="event in bluesevents" :key="event.id">
+          <b-col md="3" v-for="event in bluesEvents" :key="event.id">
              <b-card bg-variant="secondary" text-variant="white"   :title="event.name" class="mt-1 mb-1 ">
               <BootstrapImage :image-src-url="event.images[0].url" /> 
               <b-card-text> Date: {{event.dates.start.localDate}} </b-card-text>
@@ -16,6 +25,8 @@
           </b-col>
         </b-row>
       </div>
+      </div>
+       </section>
     </b-container>
   </div>
 </template>
@@ -29,10 +40,11 @@ import axios from 'axios'
             loading: true,
             items: null,
             errored: false,
-            bluesevents: []
+            bluesEvents: []
         }
     },
      mounted () {
+
     let genre = 'KnvZfZ7vAvd'
     let url = `https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&source=ticketmaster&locale=*&countryCode=US&stateCode=WA&classificationName=music&classificationId=${genre}`
 
@@ -40,17 +52,25 @@ import axios from 'axios'
         .get(url)
         .then(response => {
             this.items = response.data
-            this.bluesevents = this.items._embedded.events
+            this.bluesEvents = this.items._embedded.events
 
-               for (let i =0; i<this.bluesevents.length; i++){
-
-                let event_image_array = this.bluesevents[i].images
-
+               for (let i =0; i<this.bluesEvents.length; i++){
+                let event_image_array = this.bluesEvents[i].images
                 let filteredImagesArray = event_image_array.filter(function (el) {
                             return el.width == 640 && el.height == 360;
                  });
-                this.bluesevents[i].images = filteredImagesArray
+                this.bluesEvents[i].images = filteredImagesArray
+                let date = new Date(this.bluesEvents[i].dates.start.localDate)
+                this.bluesEvents[i].dates.start.localDate = date
+            
+                
             }
+
+              //If no data is found
+           if(this.items.length == 0){
+             this.errored = true 
+           }
+
         })
         .catch(error => {
             console.log(error)

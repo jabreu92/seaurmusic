@@ -1,6 +1,15 @@
 <template>
   <div>
+    
     <b-container fluid>
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+          </section>
+          <section v-else>
+            <div v-if="this.loading"> 
+      <p>One Moment... we are getting your request</p>
+    </div>
+    <div v-else>
       <div v-if="!this.loading">
         <b-row>
           <b-col md="3" v-for="event in rockEvents" :key="event.id">
@@ -16,6 +25,8 @@
           </b-col>
         </b-row>
       </div>
+      </div>
+       </section>
     </b-container>
   </div>
 </template>
@@ -51,8 +62,14 @@ import axios from 'axios'
                 this.rockEvents[i].images = filteredImagesArray
                 let date = new Date(this.rockEvents[i].dates.start.localDate)
                 this.rockEvents[i].dates.start.localDate = date
+            
                 
             }
+
+              //If no data is found
+           if(this.items.length == 0){
+             this.errored = true 
+           }
 
         })
         .catch(error => {
