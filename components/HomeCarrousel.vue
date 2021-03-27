@@ -23,9 +23,13 @@
           v-for="event in topEvents"
           :key="event.id"
           :img-src="event.images[0].url"
-          :caption="event.name"
         >
-      <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
+      <div class="d-flex h-100 align-items-center justify-content-center ">
+          <div>
+            <h4 id="caption-head">{{event.name}}</h4>
+             <b-button :href="event.url" target="_blank" variant="success">Click Here to Learn More </b-button>
+            </div>
+        </div>
         </b-carousel-slide>
   </b-carousel>
     </div>
@@ -78,7 +82,20 @@ export default {
 </script>
 
 <style scoped>
+.carousel-center .carousel-caption {
+    top: 20px;
+   
+   
+  }
+  #caption-head {
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+  }
 
-
+  
 
 </style>
+
+
+
