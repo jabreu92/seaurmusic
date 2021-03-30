@@ -32,35 +32,35 @@ export default {
       details:[
               {
                   title: 'Who Made This Web App ?',
-                  content: 'card1 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'More About The Author',
-                  content: 'card2 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'Career Experience ',
-                  content: 'card3 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'Hobbies',
-                  content: 'card4 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'Author Roots',
-                  content: 'card5 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'Contact Info',
-                  content: 'card6 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'UW Info',
-                  content: 'card7 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               },
               {
                   title: 'Current Life',
-                  content: 'card8 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terryrichardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+                  content: 'TBD'
               }
           ]
     }
