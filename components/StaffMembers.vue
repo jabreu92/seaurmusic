@@ -12,7 +12,7 @@
           <p>One Moment... we are getting your request</p>
         </div>
         <div v-else>
-          <h3>The Staff</h3>
+        <h1 class="title">{{ title }}</h1>
           <div v-if="!this.loading">
             <b-row>
               <b-col md="3" v-for="index in 4 " :key="index">
@@ -42,8 +42,22 @@ export default {
             loading: true,
             errored: false,
             staffmembers: [],
+            title: 'SeaUrMusic Staff'
 
         }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'faq-id',
+            name: 'description',
+            content: 'FAQ Page'
+          }
+        ]
+      }
     },
      mounted () {
      axios

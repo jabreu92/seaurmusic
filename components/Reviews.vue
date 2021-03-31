@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <h3>Customer Reviews</h3>
+      <h2>Customer Reviews</h2>
       <section v-if="errored">
         <p>
           We're sorry, we're not able to retrieve this information at the

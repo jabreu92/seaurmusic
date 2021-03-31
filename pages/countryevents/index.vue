@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-container fluid>
+      <h1 class="title">{{ title }}</h1>
       <section v-if="errored">
         <p>
           We're sorry, we're not able to retrieve this information at the
@@ -53,8 +54,22 @@ import axios from 'axios'
             loading: true,
             items: null,
             errored: false,
-            countryEvents: []
+            countryEvents: [],
+            title: 'SeaUrMusic Country Concerts'
         }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'countryevents-id',
+            name: 'description',
+            content: 'Country Events Page'
+          }
+        ]
+      }
     },
      mounted () {
 

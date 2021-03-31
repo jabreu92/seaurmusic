@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-container fluid>
+       <h1 class="title">{{ title }}</h1>
       <section v-if="errored">
         <p>
           We're sorry, we're not able to retrieve this information at the
@@ -53,10 +54,24 @@ import axios from 'axios'
             loading: true,
             items: null,
             errored: false,
-            classicalEvents: []
+            classicalEvents: [],
+            title: 'SeaUrMusic Classical Concerts'
         }
     },
-     mounted () {
+     head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'classicalevents-id',
+            name: 'description',
+            content: 'Classical Events Page'
+          }
+        ]
+      }
+    },
+    mounted () {
 
     let genre = 'KnvZfZ7vAeJ'
     let url = `https://app.ticketmaster.com/discovery/v2/events?apikey=QLnzwCGhWDMWq3z894HvbEL1QuKH2XGw&source=ticketmaster&locale=*&countryCode=US&stateCode=WA&classificationName=music&classificationId=${genre}`

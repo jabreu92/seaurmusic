@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Top 5 Music Events in WA</h3>
+    <h1>{{title}}</h1>
     <section v-if="errored">
       <p>
         We're sorry, we're not able to retrieve this information at the moment,
@@ -52,8 +52,22 @@ export default {
             loading: true,
             items: null,
             errored: false,
-            topEvents: []
+            topEvents: [],
+            title: 'Seattle Top 5 Concerts'
         }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'mainpage-id',
+            name: 'description',
+            content: 'Main Page'
+          }
+        ]
+      }
     },
      mounted () {
      axios

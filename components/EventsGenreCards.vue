@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Select your genre</h3>
+    <h1 class="title">{{ title }}</h1>
     <b-row>
       <b-col md="3" v-for="item in items" :key="item.id">
         <b-card
@@ -80,8 +80,22 @@ export default {
                       classificationId: 'KnvZfZ7vAvF',
                       name: 'danceelectronicevents'
                       }
-            ]
+            ],
+            title: 'Music Genres'
         }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'musicgenre-id',
+            name: 'description',
+            content: 'Music Genre Page'
+          }
+        ]
+      }
     }
 }
 </script>
