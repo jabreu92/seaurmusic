@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <h1 class="title">{{ title }}</h1>
+      <h1 class="title">{{ title }}</h1>wo
       <section v-if="errored">
         <p>
           We're sorry, we're not able to retrieve this information at the
