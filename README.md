@@ -1,4 +1,7 @@
 # app
+# Description of your project, bio of user and section SEO what you think for it and next plan. 
+# What you have learned from SEO 2 paragraphs for each
+# Things you will use to imrpove SEO that implement later thats the detailed plan. 
 
 ## Build Setup
 
