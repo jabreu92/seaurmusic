@@ -1,10 +1,9 @@
 # SeaUrMusic
 
-$ A website for everything music in Seattle link below:
-  https://lucid-wozniak-ec7316.netlify.app/
+$ A website for everything music in Seattle link ( https://lucid-wozniak-ec7316.netlify.app/ )
 
-$ To learn more about the author please visit the linkedin profile below:
-  https://www.linkedin.com/in/jose-abreu/
+$ To learn more about the author please visit the linkedin profile ( https://www.linkedin.com/in/jose-abreu/ )
+
 
 # Build Setup
 
