@@ -5,6 +5,11 @@
 
 ## Build Setup
 
+# SEO ( Search Engine Optimization) Learnings & Fundamentals
+
+$ In simple words SEO is how to get search engines such as Google to rank your
+web site higher than other web sites
+
 ```bash
 # install dependencies
 $ npm install
@@ -18,6 +23,3 @@ $ npm run start
 
 # generate static project
 $ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
