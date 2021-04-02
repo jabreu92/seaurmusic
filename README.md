@@ -1,6 +1,10 @@
 # SeaUrMusic
 
-$ Application that provides common place for music events in Seattle
+$ A website for everything music in Seattle link below:
+  https://lucid-wozniak-ec7316.netlify.app/
+
+$ To learn more about the author please visit the linkedin profile below:
+  https://www.linkedin.com/in/jose-abreu/
 
 # Build Setup
 
@@ -17,7 +21,7 @@ $ npm run start
 # generate static project
 $ npm run generate
 
-# SEO ( Search Engine Optimization) Learnings & Fundamentals
+# SEO ( Search Engine Optimization) Learnings & Future Ideas
 
 $ Lessons Learned: 
 
