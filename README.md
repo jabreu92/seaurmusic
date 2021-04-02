@@ -1,16 +1,9 @@
-# app
-# Description of your project, bio of user and section SEO what you think for it and next plan. 
-# What you have learned from SEO 2 paragraphs for each
-# Things you will use to imrpove SEO that implement later thats the detailed plan. 
+# SeaUrMusic
 
-## Build Setup
+$ Application that provides common place for music events in Seattle
 
-# SEO ( Search Engine Optimization) Learnings & Fundamentals
+# Build Setup
 
-$ In simple words SEO is how to get search engines such as Google to rank your
-web site higher than other web sites
-
-```bash
 # install dependencies
 $ npm install
 
@@ -23,3 +16,12 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# SEO ( Search Engine Optimization) Learnings & Fundamentals
+
+$ Lessons Learned: 
+
+$ In simple terms, SEO is how search engines such as Google rank your website against other's. 
+$ It’s also the practice of increasing both the quality and quantity of website traffic, as well as exposure to your brand, through non-paid (also known as "organic") search engine $ $ results. From what I have learned, the higher your SEO score, the more likely people will find your page through search engines. There are different techniques to increase an SEO $ $ score such as: Having only one H1 tag per page, Adding proper Title, Description & Keyword Metadata and other strategies. As a result, SEO is very important to make your webpage  $ accesible to more users and easy to find.
+
+
